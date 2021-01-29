@@ -4,16 +4,18 @@ import java.io.*;
 import java.util.*;
 
 public class CyclomaticComplexity {
-    public int check() {
+    public int check() throws IOException {
         int complexity = 0;
         String fileName;
         String[] keywords = {"if","else","while","case","for","switch","do","continue","break","&&","||","?",":","catch","finally","throw","throws","default","return"};
         String words = "";
         String line = null;
+
+        fileName = "src/main/resources/file.txt";
+        FileReader fr = new FileReader(fileName);
+        BufferedReader br = new BufferedReader(fr);
+
         try {
-            fileName = "src/main/resources/file.txt";
-            FileReader fr = new FileReader(fileName);
-            BufferedReader br = new BufferedReader(fr);
             line = br.readLine();
             while (line != null)
             {
@@ -32,10 +34,12 @@ public class CyclomaticComplexity {
                 line = br.readLine();
             }
         }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             e.printStackTrace();
         }
+        finally {
+        br.close();
+    }
         return (complexity);
     }
 
