@@ -1,24 +1,20 @@
 
-N
-java:S34006"9Remove this method and declare a constant for this value.(¡ğ¬
-E
-java:S11721"/Remove this unused method parameter "javaBook".(¿Óî­
-H
-java:S11728"-Remove this unused method parameter "metoda".(Æ¸¸ùÿÿÿÿ
-N	java:S106$"9Replace this use of System.out or System.err by a logger.(ß¶³ÿ
-V	java:S125*"<This block of commented-out lines of code should be removed.(õÿâ‚úÿÿÿÿ
-—
-java:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Óî­
-N	java:S106-"9Replace this use of System.out or System.err by a logger.(ÄÇÍ©
-H
-java:S11724"-Remove this unused method parameter "metoda".(İ˜ÿúÿÿÿÿ
-N	java:S106!"9Replace this use of System.out or System.err by a logger.(ÕºÅã
-O
-java:S1128"4Remove this unused import 'java.util.regex.Pattern'.(Ã•…Äúÿÿÿÿ
-E
-java:S1128"0Remove this unused import 'com.bts.log.LogDemo'.(Üçô5
-N	java:S106"9Replace this use of System.out or System.err by a logger.(­¥£ˆ
-T
-java:S3400?"9Remove this method and declare a constant for this value.(Ö§”Óşÿÿÿÿ
-?
-java:S11441")Remove this unused private "info" method.(¿Óî­
+L	java:S106"9Replace this use of System.out or System.err by a logger.(ÄÇÍ©
+L	java:S106"9Replace this use of System.out or System.err by a logger.(ß¶³ÿ
+•
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Óî­
+L
+java:S3400"9Remove this method and declare a constant for this value.(¡ğ¬
+L	java:S106"9Replace this use of System.out or System.err by a logger.(­¥£ˆ
+T	java:S125"<This block of commented-out lines of code should be removed.(õÿâ‚úÿÿÿÿ
+F
+java:S1172"-Remove this unused method parameter "metoda".(İ˜ÿúÿÿÿÿ
+=
+java:S1144")Remove this unused private "info" method.(¿Óî­
+R
+java:S3400"9Remove this method and declare a constant for this value.(Ö§”Óşÿÿÿÿ
+C
+java:S1172"/Remove this unused method parameter "javaBook".(¿Óî­
+F
+java:S1172"-Remove this unused method parameter "metoda".(Æ¸¸ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÕºÅã8‰íÆëô.

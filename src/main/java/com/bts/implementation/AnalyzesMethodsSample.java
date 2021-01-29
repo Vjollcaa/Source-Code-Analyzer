@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class AnalyzesMethods {
+public class AnalyzesMethodsSample {
 
     public static void main(String [] args) throws FileNotFoundException {
         // Skeneri per lexues te inputit

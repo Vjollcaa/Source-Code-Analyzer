@@ -1,0 +1,25 @@
+
+x
+java:S1192"\Define a constant instead of duplicating this literal "src/main/resources/file.txt" 3 times.( ƒ’_8ê…®ìô.
+U	java:S106;"9Replace this use of System.out or System.err by a logger.(²˜ù©8ê…®ìô.
+]	java:S125#"<This block of commented-out lines of code should be removed.(¿Ì„ñúÿÿÿÿ8ê…®ìô.
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(Žù‚´üÿÿÿÿ8ê…®ìô.
+Z	java:S106T"9Replace this use of System.out or System.err by a logger.(‡®‰‡ùÿÿÿÿ8ê…®ìô.
+V	java:S106Ž"9Replace this use of System.out or System.err by a logger.(™ü—è8Œ­Žíô.
+Z	java:S106P"9Replace this use of System.out or System.err by a logger.(Ì”ˆ‡ûÿÿÿÿ8ê…®ìô.
+Z	java:S106R"9Replace this use of System.out or System.err by a logger.(”ÄÄìýÿÿÿÿ8ê…®ìô.
+Z	java:S106V"9Replace this use of System.out or System.err by a logger.(Ç¯ó‰ýÿÿÿÿ8ê…®ìô.
+Z	java:S106D"9Replace this use of System.out or System.err by a logger.(žŠúêùÿÿÿÿ8ê…®ìô.
+t
+java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(‘ê„±ùÿÿÿÿ8‡©ñìô.
+[	java:S106“"9Replace this use of System.out or System.err by a logger.(ÞžÒ—üÿÿÿÿ8Œ­Žíô.
+i
+java:S2095_"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(´ÓñÊ8ê…®ìô.
+Z	java:S106A"9Replace this use of System.out or System.err by a logger.(®•“Æøÿÿÿÿ8ê…®ìô.
+i
+java:S2095o"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(´ÓñÊ8ê…®ìô.
+T	java:S106h"9Replace this use of System.out or System.err by a logger.(è¹ú8ê…®ìô.
+[	java:S106‰"9Replace this use of System.out or System.err by a logger.(ê¤¨ýüÿÿÿÿ8Œ­Žíô.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¾á¦È8Œ­Žíô.
+]	java:S125"<This block of commented-out lines of code should be removed.(æð¯¢ýÿÿÿÿ8ê…®ìô.
+V	java:S106‹"9Replace this use of System.out or System.err by a logger.(«Ò×é8©ð³íô.
