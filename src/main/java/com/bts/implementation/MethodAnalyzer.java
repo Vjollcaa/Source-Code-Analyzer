@@ -120,8 +120,9 @@ public class MethodAnalyzer {
 
         FileReader fr = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fr);
-        List<String> forCondition = new ArrayList<>();
+        List<String> forConditions = new ArrayList<>();
         List<String> ifConditions = new ArrayList<>();
+        List<String> whileConditions = new ArrayList<>();
 
         try {
             line = br.readLine();
@@ -129,18 +130,24 @@ public class MethodAnalyzer {
                 if (line.contains("for")) {
                     Matcher m = pattern.matcher(line);
                     while (m.find()) {
-                        getForConditions(m, forCondition);
-                        checkForConditions(forCondition, inputVariable);
+                        getForConditions(m, forConditions);
                     }
                 } else if (line.contains("if")) {
                     Matcher m = pattern.matcher(line);
                     while (m.find()) {
                         getIfConditions(m, ifConditions);
                     }
+                } else if (line.contains("while")) {
+                    Matcher m = pattern.matcher(line);
+                    while (m.find()) {
+                        getWhileConditions(m, whileConditions);
+                    }
                 }
                 line = br.readLine();
             }
+            checkForConditions(forConditions, inputVariable);
             checkIfConditions(ifConditions, inputVariable);
+            checkWhileConditions(whileConditions, inputVariable);
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -150,11 +157,11 @@ public class MethodAnalyzer {
         }
     }
 
-    private void getForConditions(Matcher m, List<String> forCondition) {
+    private void getForConditions(Matcher m, List<String> forConditions) {
 
         StringTokenizer stTokenizer = new StringTokenizer(m.group(), ";");
         while (stTokenizer.hasMoreTokens()) {
-            forCondition.add(stTokenizer.nextToken());
+            forConditions.add(stTokenizer.nextToken());
         }
     }
 
@@ -165,13 +172,20 @@ public class MethodAnalyzer {
         }
     }
 
-    private void checkForConditions(List<String> forCondition, String inputVariable) {
-
-        if (forCondition.get(1).contains(inputVariable)) {
-            System.out.println("\n -> Kushti FOR: "+ forCondition +" varet nga variabla hyrëse: " + inputVariable);
-        } else {
-            System.out.println("\n -> Nuk është detektuar asnjë kusht FOR");
+    private void getWhileConditions(Matcher m, List<String> whileConditions) {
+        StringTokenizer stTokenizer = new StringTokenizer(m.group());
+        while (stTokenizer.hasMoreTokens()) {
+            whileConditions.add(stTokenizer.nextToken());
         }
+    }
+
+    private void checkForConditions(List<String> forConditions, String inputVariable) {
+
+            if (forConditions.get(1).contains(inputVariable)) {
+                System.out.println("\n -> Kushti FOR: "+ forConditions +" varet nga variabla hyrëse: " + inputVariable);
+            } else {
+                System.out.println("\n -> Kushti FOR: "+ forConditions +" NUK varet nga variabla hyrëse: " + inputVariable);
+            }
     }
 
     private void checkIfConditions(List<String> ifConditions, String inputVariable){
@@ -180,7 +194,18 @@ public class MethodAnalyzer {
             if (ifCondition.contains(inputVariable)) {
                 System.out.println("\n -> Kushti IF: "+ ifCondition +" varet nga variabla hyrëse: " + inputVariable);
             } else {
-                System.out.println("\n -> Nuk është detektuar asnjë kusht IF");
+                System.out.println("\n -> Kushti IF: "+ ifCondition +" NUK varet nga variabla hyrëse: " + inputVariable);
+            }
+        }
+    }
+
+    private void checkWhileConditions(List<String> whileConditions, String inputVariable) {
+
+        for (String whileCondition : whileConditions) {
+            if (whileCondition.contains(inputVariable)) {
+                System.out.println("\n -> Kushti WHILE: "+ whileCondition +" varet nga variabla hyrëse: " + inputVariable);
+            } else {
+                System.out.println("\n -> Kushti WHILE: "+ whileCondition +" NUK varet nga variabla hyrëse: " + inputVariable);
             }
         }
     }
