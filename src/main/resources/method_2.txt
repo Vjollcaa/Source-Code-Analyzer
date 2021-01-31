@@ -1,0 +1,8 @@
+public static String nrTel(int [] x) {
+String res = "";
+ if (x.length==9){
+ res=x[0]+""+x[1]+""+x[2]+"/"+x[3]+""
+ +x[4]+""+x[5]+"-"+x[6]+""+x[7]+""+x[8];
+ }
+ return res;
+}

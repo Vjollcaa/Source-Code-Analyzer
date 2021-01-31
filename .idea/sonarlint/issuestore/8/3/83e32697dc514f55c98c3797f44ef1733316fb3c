@@ -1,0 +1,20 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(­¥£ˆ
+T
+java:S3400<"9Remove this method and declare a constant for this value.(Ö§”Óþÿÿÿÿ
+?
+java:S1144.")Remove this unused private "info" method.(¿Óî­
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÕºÅã
+E
+java:S1172."/Remove this unused method parameter "javaBook".(¿Óî­
+H
+java:S11725"-Remove this unused method parameter "metoda".(Æ¸¸ùÿÿÿÿ
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(ß¶³ÿ
+—
+java:S1186."€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Óî­
+V	java:S125'"<This block of commented-out lines of code should be removed.(õÿâ‚úÿÿÿÿ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(ÄÇÍ©
+N
+java:S34003"9Remove this method and declare a constant for this value.(¡ð¬
+H
+java:S11721"-Remove this unused method parameter "metoda".(Ý˜žÿúÿÿÿÿ

@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class MethodAnalyzer {
 
     List<String> parameters = new ArrayList<>();
-    String fileName = "src/main/resources/file.txt";
+    String fileName ="src/main/resources/method_1.txt";
     String line = null;
     String inputVariableName = null;
 
@@ -58,22 +58,28 @@ public class MethodAnalyzer {
 
     public void checkParameters(List<String> parameters) {
 
-        for (String parameter : parameters) {
+        if (parameters.isEmpty()) {
+            System.out.println("\n -> Metoda nuk pranon asnjë input variabël!");
+        } else {
+            for (String parameter : parameters) {
+                inputVariableName = getLastToken(parameter);
 
-            inputVariableName = getLastToken(parameter);
-
-            if (parameter.contains("int []") || parameter.contains("String []")) {
-                System.out.println("\n -> Metoda nën testim ka si input një variabël të tipit VARG, dhe fillimisht ajo mund të testohet me vlerat "+ inputVariableName +"={} " +
-                        "apo "+ inputVariableName +"≠{}");
-            } else if (parameter.contains("int")) {
-                System.out.println("\n -> Metoda nën testim ka si input një variabël të tipit INTEGER, dhe fillimisht ajo mund të testohet me vlerat "+ inputVariableName +"=0 " +
-                        "apo "+ inputVariableName +">0");
-            } else if (parameter.contains("string")) {
-                System.out.println("\n -> Metoda nën testim ka si input një variabël të tipit STRING, dhe fillimisht ajo mund të testohet me vlerat "+ inputVariableName +"={} " +
-                        "apo "+ inputVariableName +"≠{}");
-            } else if (parameter.contains("boolean")) {
-                System.out.println("\n -> Metoda nen testim ka si input nje variabel te tipit BOOLEAN, dhe fillimisht ajo mund te testohet me vlerat "+ inputVariableName +"=true " +
-                        "apo "+ inputVariableName +"=false");
+                if (parameter.contains("int []") || parameter.contains("String []")) {
+                    System.out.println("\n -> Metoda nën testim ka si input një variabël të tipit VARG, dhe fillimisht ajo mund të testohet me vlerat " + inputVariableName + "=[] " +
+                            "apo " + inputVariableName + "≠[]");
+                } else if (parameter.contains("int")) {
+                    System.out.println("\n -> Metoda nën testim ka si input një variabël të tipit INTEGER, dhe fillimisht ajo mund të testohet me vlerat " + inputVariableName + "=0 " +
+                            "apo " + inputVariableName + ">0");
+                } else if (parameter.contains("string") || parameter.contains("String")) {
+                    System.out.println("\n -> Metoda nën testim ka si input një variabël të tipit STRING, dhe fillimisht ajo mund të testohet me vlerat " + inputVariableName + "=null " +
+                            "apo " + inputVariableName + "≠null");
+                } else if (parameter.contains("boolean") || parameter.contains("Boolean")) {
+                    System.out.println("\n -> Metoda nen testim ka si input nje variabel te tipit BOOLEAN, dhe fillimisht ajo mund te testohet me vlerat " + inputVariableName + "=true " +
+                            "apo " + inputVariableName + "=false");
+                } else if (parameter.contains("List")) {
+                    System.out.println("\n -> Metoda nen testim ka si input nje variabel te tipit LIST, dhe fillimisht ajo mund te testohet me vlerat " + inputVariableName + "={} " +
+                            "apo " + inputVariableName + "≠{}");
+                }
             }
         }
     }
@@ -87,11 +93,15 @@ public class MethodAnalyzer {
 
         String outputVariableName = getFirstToken(line);
 
+        if(outputVariableName.equals("static")) {
+            outputVariableName = getSecondToken(line);
+        }
+
         if (outputVariableName.contains("int []") || outputVariableName.contains("String []")) {
             System.out.println("\n -> Metoda nën testim kthen një output të tipit VARG.");
         } else if (outputVariableName.contains("int")) {
             System.out.println("\n -> Metoda nën testim kthen një output të tipit INTEGER.");
-        } else if (outputVariableName.contains("string")) {
+        } else if (outputVariableName.contains("string") || outputVariableName.contains("String")) {
             System.out.println("\n -> Metoda nën testim kthen një output të tipit STRING.");
         } else if (outputVariableName.contains("boolean")) {
             System.out.println("\n -> Metoda nën testim kthen një output të tipit BOOLEAN.");
@@ -100,6 +110,10 @@ public class MethodAnalyzer {
 
     private String getFirstToken(String strValue) {
         return strValue.split(" ")[1];
+    }
+
+    private String getSecondToken(String strValue) {
+        return strValue.split(" ")[2];
     }
 
     public void checkNumberOfConditions() throws IOException {
@@ -113,7 +127,9 @@ public class MethodAnalyzer {
             }
             line = br.readLine();
         }
-        System.out.println("\n -> Nevojiten maximum " + conditionNr * 2 + " test cases!");
+        if (conditionNr != 0) {
+            System.out.println("\n -> Nevojiten maximum " + conditionNr * 2 + " test cases! Por ky numër mund të optimizohet edhe më tej.");
+        }
     }
 
     public void analyzeConditions(String inputVariable) throws IOException {
@@ -166,6 +182,7 @@ public class MethodAnalyzer {
     }
 
     private void getIfConditions(Matcher m, List<String> ifConditions) {
+
         StringTokenizer stTokenizer = new StringTokenizer(m.group());
         while (stTokenizer.hasMoreTokens()) {
             ifConditions.add(stTokenizer.nextToken());
@@ -173,6 +190,7 @@ public class MethodAnalyzer {
     }
 
     private void getWhileConditions(Matcher m, List<String> whileConditions) {
+
         StringTokenizer stTokenizer = new StringTokenizer(m.group());
         while (stTokenizer.hasMoreTokens()) {
             whileConditions.add(stTokenizer.nextToken());
@@ -181,17 +199,19 @@ public class MethodAnalyzer {
 
     private void checkForConditions(List<String> forConditions, String inputVariable) {
 
-            if (forConditions.get(1).contains(inputVariable)) {
+            if (!forConditions.isEmpty() && forConditions.get(1).contains(inputVariable)) {
                 System.out.println("\n -> Kushti FOR: "+ forConditions +" varet nga variabla hyrëse: " + inputVariable);
+            } else if(forConditions.isEmpty()) {
+                System.out.println("\n -> Nuk është detektuar asnjë kusht FOR!");
             } else {
                 System.out.println("\n -> Kushti FOR: "+ forConditions +" NUK varet nga variabla hyrëse: " + inputVariable);
-            }
+        }
     }
 
     private void checkIfConditions(List<String> ifConditions, String inputVariable){
 
         for (String ifCondition : ifConditions) {
-            if (ifCondition.contains(inputVariable)) {
+            if (inputVariable !=null && ifCondition.contains(inputVariable)) {
                 System.out.println("\n -> Kushti IF: "+ ifCondition +" varet nga variabla hyrëse: " + inputVariable);
             } else {
                 System.out.println("\n -> Kushti IF: "+ ifCondition +" NUK varet nga variabla hyrëse: " + inputVariable);

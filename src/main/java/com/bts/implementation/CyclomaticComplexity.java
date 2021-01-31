@@ -8,10 +8,10 @@ public class CyclomaticComplexity {
         int complexity = 0;
         String fileName;
         String[] keywords = {"if","else","while","case","for","switch","do","continue","break","&&","||","?",":","catch","finally","throw","throws","default","return"};
-        String words = "";
-        String line = null;
+        String words;
+        String line;
 
-        fileName = "src/main/resources/file.txt";
+        fileName = "src/main/resources/method_1.txt";
         FileReader fr = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fr);
 
