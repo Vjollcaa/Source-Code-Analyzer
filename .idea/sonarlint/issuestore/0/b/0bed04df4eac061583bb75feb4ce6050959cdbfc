@@ -1,27 +1,29 @@
 
-Z	java:S106E"9Replace this use of System.out or System.err by a logger.(•ÏòÖøÿÿÿÿ8Áë‡Êõ.
-S
-java:S1117z"6Rename "br" which hides the field declared at line 21.(´ÓñÊ8Áë‡Êõ.
-Z	java:S106K"9Replace this use of System.out or System.err by a logger.(Šúêùÿÿÿÿ8ê…®ìô.
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(É†ğú8Áë‡Êõ.
-V	java:S106Ç"9Replace this use of System.out or System.err by a logger.(›·®„8Áë‡Êõ.
-Z	java:S106a"9Replace this use of System.out or System.err by a logger.(Ç¯ó‰ıÿÿÿÿ8ê…®ìô.
-U	java:S106B"9Replace this use of System.out or System.err by a logger.(Âğ‚Œ8Áë‡Êõ.
-Z	java:S106["9Replace this use of System.out or System.err by a logger.(Ì”ˆ‡ûÿÿÿÿ8ê…®ìô.
-V	java:S106¿"9Replace this use of System.out or System.err by a logger.(¬ÀÌÅ8¨¯ŒËõ.
-X
-java:S1117y"6Rename "fr" which hides the field declared at line 20.(ó‘°¤øÿÿÿÿ8Áë‡Êõ.
-
-java:S1192»"^Define a constant instead of duplicating this literal " varet nga variabla hyrÃ«se: " 3 times.(Ï‡œÿÿÿÿÿ8Áë‡Êõ.
-[	java:S106Ò"9Replace this use of System.out or System.err by a logger.(°¼Îúşÿÿÿÿ8Áë‡Êõ.
-Z	java:S106_"9Replace this use of System.out or System.err by a logger.(‡®‰‡ùÿÿÿÿ8ê…®ìô.
-[	java:S106½"9Replace this use of System.out or System.err by a logger.(õƒÉ³ûÿÿÿÿ8Áë‡Êõ.
-[	java:S106É"9Replace this use of System.out or System.err by a logger.(İ’®úÿÿÿÿ8Áë‡Êõ.
-€
-java:S1192¿"bDefine a constant instead of duplicating this literal " NUK varet nga variabla hyrÃ«se: " 3 times.(¬ÀÌÅ8èˆËõ.
-U	java:S106H"9Replace this use of System.out or System.err by a logger.(Ş—ç‹8Áë‡Êõ.
-Z	java:S106]"9Replace this use of System.out or System.err by a logger.(”ÄÄìıÿÿÿÿ8ê…®ìô.
-Z	java:S106t"9Replace this use of System.out or System.err by a logger.(à°‡¿øÿÿÿÿ8Áë‡Êõ.
-[	java:S106»"9Replace this use of System.out or System.err by a logger.(Ï‡œÿÿÿÿÿ8Áë‡Êõ.
-V	java:S106Ô"9Replace this use of System.out or System.err by a logger.(ÅÜ®ù8Áë‡Êõ.
+V
+java:S1117"6Rename "fr" which hides the field declared at line 20.(ó‘°¤øÿÿÿÿ8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(Ì”ˆ‡ûÿÿÿÿ8ê…®ìô.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(õƒÉ³ûÿÿÿÿ8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(•ÏòÖøÿÿÿÿ8Áë‡Êõ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¬ÀÌÅ8¨¯ŒËõ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(›·®„8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(İ’®úÿÿÿÿ8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(Ç¯ó‰ıÿÿÿÿ8ê…®ìô.
+Q
+java:S1117"6Rename "br" which hides the field declared at line 21.(´ÓñÊ8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(Ï‡œÿÿÿÿÿ8Áë‡Êõ.
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(É†ğú8Áë‡Êõ.
+}
+java:S1192"bDefine a constant instead of duplicating this literal " NUK varet nga variabla hyrÃ«se: " 3 times.(¬ÀÌÅ8èˆËõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(”ÄÄìıÿÿÿÿ8ê…®ìô.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(°¼Îúşÿÿÿÿ8Áë‡Êõ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÅÜ®ù8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(‡®‰‡ùÿÿÿÿ8ê…®ìô.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(Šúêùÿÿÿÿ8ê…®ìô.
+~
+java:S1192"^Define a constant instead of duplicating this literal " varet nga variabla hyrÃ«se: " 3 times.(Ï‡œÿÿÿÿÿ8Áë‡Êõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(ÜÎœúşÿÿÿÿ8ÓüÓåõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(­äûÿÿÿÿÿ8ÓüÓåõ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(™·àì8ÓüÓåõ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(¼£Úûÿÿÿÿ8ÓüÓåõ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(³Šé°8ÓüÓåõ.

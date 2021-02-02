@@ -17,14 +17,11 @@ public class CyclomaticComplexity {
 
         try {
             line = br.readLine();
-            while (line != null)
-            {
+            while (line != null) {
                 StringTokenizer stTokenizer = new StringTokenizer(line);
-                while (stTokenizer.hasMoreTokens())
-                {
+                while (stTokenizer.hasMoreTokens()) {
                     words = stTokenizer.nextToken();
-                    for(int i=0; i<keywords.length; i++)
-                    {
+                    for(int i=0; i<keywords.length; i++) {
                         if (keywords[i].equals(words))
                         {
                             complexity++;
@@ -46,15 +43,18 @@ public class CyclomaticComplexity {
     public void showCyclomaticComplexity(int ccValue) {
         System.out.println("\n -> Kompleksiteti Ciklomatik është "+ ccValue + " dhe minimumi " + ccValue + " test cases nevojiten për ta testuar!");
         System.out.print(" -> Rezultati : ");
-        if (ccValue> 50){
+        if (ccValue> 50) {
             System.out.print("Metodë shumë komplekse dhe jostabile \n");
         }
-        else if(ccValue>= 21 && ccValue<=50)
+        else if(ccValue>= 21 && ccValue<=50) {
             System.out.print("Rrezikshmëri e lartë \n");
-        else if(ccValue>= 11 && ccValue<=20)
+        }
+        else if(ccValue>= 11 && ccValue<=20) {
             System.out.print("Rrezikshmëri mesatare \n");
-        else
+        }
+        else {
             System.out.print("Program me rrezikshmëri të ulët \n ");
+        }
     }
 
 }
